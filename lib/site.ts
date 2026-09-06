@@ -33,6 +33,7 @@ export const nav = [
 export const primaryCta = {
   href: "/iletisim?konu=kesif",
   label: "Keşif görüşmesi planlayın",
+  shortLabel: "Keşif görüşmesi",
 } as const;
 
 export const secondaryCta = {

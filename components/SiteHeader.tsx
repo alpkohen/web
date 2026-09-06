@@ -43,7 +43,9 @@ function HeaderBar({ pathname }: { pathname: string }) {
                 key={item.href}
                 href={item.href}
                 className={`text-[0.92rem] tracking-wide transition-colors ${
-                  active ? "text-ink" : "text-ink-soft hover:text-ink"
+                  active
+                    ? "text-ink underline decoration-coral decoration-1 underline-offset-[10px]"
+                    : "text-ink-soft hover:text-ink"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
@@ -53,34 +55,34 @@ function HeaderBar({ pathname }: { pathname: string }) {
           })}
           <Link
             href={primaryCta.href}
-            className="border border-coral bg-coral px-3.5 py-1.5 text-[0.88rem] text-white transition-colors hover:bg-coral-dark hover:border-coral-dark"
+            className="border border-espresso bg-espresso px-3.5 py-1.5 text-[0.88rem] text-paper transition-colors hover:bg-ink"
           >
-            {primaryCta.label}
+            {primaryCta.shortLabel}
           </Link>
         </nav>
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center border border-line lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center border border-line lg:hidden"
           aria-expanded={open}
           aria-controls={menuId}
+          aria-label={open ? "Menüyü kapat" : "Menüyü aç"}
           onClick={() => setOpen((value) => !value)}
         >
-          <span className="sr-only">{open ? "Menüyü kapat" : "Menüyü aç"}</span>
-          <span className="relative block h-3.5 w-4" aria-hidden="true">
+          <span className="relative block h-3.5 w-[18px]" aria-hidden="true">
             <span
-              className={`absolute left-0 h-px w-4 bg-ink transition ${
-                open ? "top-1.5 rotate-45" : "top-0"
+              className={`absolute left-0 h-[1.5px] w-[18px] bg-ink transition ${
+                open ? "top-[6px] rotate-45" : "top-0"
               }`}
             />
             <span
-              className={`absolute top-1.5 left-0 h-px w-4 bg-ink transition ${
+              className={`absolute top-[6px] left-0 h-[1.5px] w-[18px] bg-ink transition ${
                 open ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-0 h-px w-4 bg-ink transition ${
-                open ? "top-1.5 -rotate-45" : "top-3"
+              className={`absolute left-0 h-[1.5px] w-[18px] bg-ink transition ${
+                open ? "top-[6px] -rotate-45" : "top-[12px]"
               }`}
             />
           </span>
@@ -104,7 +106,7 @@ function HeaderBar({ pathname }: { pathname: string }) {
             ))}
             <Link
               href={primaryCta.href}
-              className="mt-2 inline-flex justify-center border border-coral bg-coral px-4 py-2.5 text-white"
+              className="mt-2 inline-flex justify-center border border-espresso bg-espresso px-4 py-2.5 text-paper"
             >
               {primaryCta.label}
             </Link>

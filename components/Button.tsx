@@ -1,15 +1,17 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost" | "onDark";
+type Variant = "primary" | "secondary" | "ghost" | "onDark" | "onDarkGhost";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-coral text-white hover:bg-coral-dark border border-coral hover:border-coral-dark",
+    "bg-espresso text-paper hover:bg-ink border border-espresso",
   secondary:
     "bg-transparent text-ink border border-ink/20 hover:border-ink hover:bg-ink hover:text-paper",
   ghost: "bg-transparent text-ink border border-transparent hover:text-coral",
   onDark:
+    "bg-coral text-white border border-coral hover:bg-coral-dark hover:border-coral-dark",
+  onDarkGhost:
     "bg-transparent text-paper border border-paper/30 hover:border-paper hover:bg-paper hover:text-espresso",
 };
 

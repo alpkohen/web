@@ -22,8 +22,10 @@ export function CtaBand({
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Button href={primaryCta.href}>{primaryCta.label}</Button>
-          <Button href={secondaryCta.href} variant="onDark">
+          <Button href={primaryCta.href} variant="onDark">
+            {primaryCta.label}
+          </Button>
+          <Button href={secondaryCta.href} variant="onDarkGhost">
             {secondaryCta.label}
           </Button>
         </div>

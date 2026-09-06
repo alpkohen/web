@@ -86,12 +86,12 @@ export function ContactForm({ defaultTopic = "" }: ContactFormProps) {
       <button
         type="submit"
         disabled={pending}
-        className="inline-flex items-center justify-center bg-coral px-5 py-2.5 text-white transition-colors hover:bg-coral-dark disabled:opacity-60"
+        className="inline-flex items-center justify-center bg-espresso px-5 py-2.5 text-paper transition-colors hover:bg-ink disabled:opacity-60"
       >
         {pending ? "Gönderiliyor…" : "Bize yazın"}
       </button>
       <p className="text-sm text-muted">
-        Form şu an kayıt alır; e-posta altyapısı bağlanınca iletilecektir. Dilerseniz doğrudan{" "}
+        Form doğrulanır; e-posta altyapısı henüz bağlı değil. Dilerseniz{" "}
         <a href={site.phoneHref} className="text-ink underline decoration-line underline-offset-4">
           telefon
         </a>{" "}
@@ -102,7 +102,7 @@ export function ContactForm({ defaultTopic = "" }: ContactFormProps) {
         >
           {site.email}
         </a>{" "}
-        üzerinden ulaşın.
+        kullanın.
       </p>
     </form>
   );
